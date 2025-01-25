@@ -1,0 +1,101 @@
+﻿@model AlphaFarha.UI.ViewModels.MRFViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Add">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.MRFNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.ProjCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.EmpCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.GeneratedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.MRFDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.DeliverTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.DeliveryLoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.ClosedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objMRF.GeneratedFrom)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MRFList) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MRFNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneratedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MRFDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliverTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliveryLoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneratedFrom)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

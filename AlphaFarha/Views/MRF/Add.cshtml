@@ -1,0 +1,88 @@
+﻿@model AlphaFarha.UI.ViewModels.MRFViewModel
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+<h4>MRF</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           @*  <div class="form-group">
+                <label asp-for="objMRF.Id" class="control-label"></label>
+                <input asp-for="objMRF.Id" class="form-control" />
+                <span asp-validation-for="objMRF.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.MRFNo" class="control-label"></label>
+                <input asp-for="objMRF.MRFNo" class="form-control" />
+                <span asp-validation-for="objMRF.MRFNo" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="objMRF.Type" class="control-label"></label>
+                <input asp-for="objMRF.Type" class="form-control" />
+                <span asp-validation-for="objMRF.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.ProjCode" class="control-label"></label>
+                <input asp-for="objMRF.ProjCode" class="form-control" />
+                <span asp-validation-for="objMRF.ProjCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.EmpCode" class="control-label"></label>
+                <input asp-for="objMRF.EmpCode" class="form-control" />
+                <span asp-validation-for="objMRF.EmpCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.GeneratedOn" class="control-label"></label>
+                <input asp-for="objMRF.GeneratedOn" class="form-control" />
+                <span asp-validation-for="objMRF.GeneratedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.MRFDate" class="control-label"></label>
+                <input asp-for="objMRF.MRFDate" class="form-control" />
+                <span asp-validation-for="objMRF.MRFDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.Status" class="control-label"></label>
+                <input asp-for="objMRF.Status" class="form-control" />
+                <span asp-validation-for="objMRF.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.DeliverTo" class="control-label"></label>
+                <input asp-for="objMRF.DeliverTo" class="form-control" />
+                <span asp-validation-for="objMRF.DeliverTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.DeliveryLoc" class="control-label"></label>
+                <input asp-for="objMRF.DeliveryLoc" class="form-control" />
+                <span asp-validation-for="objMRF.DeliveryLoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.ClosedOn" class="control-label"></label>
+                <input asp-for="objMRF.ClosedOn" class="form-control" />
+                <span asp-validation-for="objMRF.ClosedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objMRF.GeneratedFrom" class="control-label"></label>
+                <input asp-for="objMRF.GeneratedFrom" class="form-control" />
+                <span asp-validation-for="objMRF.GeneratedFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
